@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const restaurantScema = new mongoose.Schema({
     ID: Number,
     Name: String,
-    Cuisines: String,
+    Cuisines:  [{type: String}],
     AverageCostForTwo: Number,
     Currency: String,
     HasTablebooking: String,
     HasOnlineDelivery: String,
-    AggregateRating: mongoose.Schema.Types.Decimal128,
+    AggregateRating: Number,
     RatingColor: String,
     RatingText: String,
     Votes: Number
